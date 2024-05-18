@@ -1,0 +1,234 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Allow scrolling */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Covers only the top half */
+  background-image: url("images/k.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: white; /* Background color for the bottom half */
+  z-index: -1;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed; /* Sticky navbar */
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px; /* Adjust this value as needed */
+}
+
+nav li {
+  margin-left: 20px; /* Adjust this value as needed */
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 90px;
+  margin-top: 120px;
+  margin-left: 200px;
+  color: rgb(255, 255, 255);
+}
+
+h3 span {
+  display: inline-block;
+  animation: bounce 2s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+h3 span:nth-child(1) { --i: 0; }
+h3 span:nth-child(2) { --i: 1; }
+h3 span:nth-child(3) { --i: 2; }
+/* Continue this pattern for each span */
+h3 span:nth-child(4) { --i: 3; }
+h3 span:nth-child(5) { --i: 4; }
+h3 span:nth-child(6) { --i: 5; }
+h3 span:nth-child(7) { --i: 6; }
+h3 span:nth-child(8) { --i: 7; }
+h3 span:nth-child(9) { --i: 8; }
+h3 span:nth-child(10) { --i: 9; }
+h3 span:nth-child(11) { --i: 10; }
+h3 span:nth-child(12) { --i: 11; }
+h3 span:nth-child(13) { --i: 12; }
+h3 span:nth-child(14) { --i: 13; }
+h3 span:nth-child(15) { --i: 14; }
+h3 span:nth-child(16) { --i: 15; }
+h3 span:nth-child(17) { --i: 16; }
+h3 span:nth-child(18) { --i: 17; }
+h3 span:nth-child(19) { --i: 18; }
+h3 span:nth-child(20) { --i: 19; }
+h3 span:nth-child(21) { --i: 20; }
+h3 span:nth-child(22) { --i: 21; }
+h3 span:nth-child(23) { --i: 22; }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25vh; /* Start just below the background image */
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img,
+.card video {
+  width: 100%;
+  height: 350px; /* Set a fixed height for consistent sizing */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  transition: transform 0.3s; /* Add transition for smooth zoom effect */
+}
+
+.card img:hover,
+.card video:hover {
+  transform: scale(1.1); /* Zoom effect */
+}
+
+.card p {
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  margin: 0;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  h3 {
+    font-size: 70px;
+    margin-left: 100px;
+  }
+
+  nav ul {
+    padding-right: 10px;
+  }
+
+  nav a {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 50px;
+    margin-left: 50px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+  }
+
+  nav li {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 30px;
+    margin-left: 20px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+.card img,
+.card video {
+  width: 100%;
+  height: 350px; /* Set a fixed height for consistent sizing */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}

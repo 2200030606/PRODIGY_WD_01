@@ -1,0 +1,98 @@
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed; /* Sticky navbar */
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px; /* Adjust this value as needed */
+}
+
+nav li {
+  margin-left: 20px; /* Adjust this value as needed */
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.image-container {
+  position: fixed;
+  top: 50%;
+  right: 100px; /* Position at the right */
+  transform: translateY(-50%);
+  width: 600px; /* Adjust width as needed */
+  height: 600px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.square {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.square img {
+  width: calc(50% - 20px); /* Adjusted width to include gap */
+  height: calc(50% - 25px); /* Adjusted height to include gap */
+  object-fit: cover;
+  object-position: center;
+  margin: 2.5px; /* Added margin to create a small gap */
+}
+
+/* Add styles for the content container */
+.content-container {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space evenly horizontally */
+  max-width: 1200px; /* Set max-width to limit width */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+}
+
+/* Style for the text */
+.text {
+  max-width: 40%; /* Adjust width as needed */
+}
+
+
+
+
+
