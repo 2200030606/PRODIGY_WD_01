@@ -6,7 +6,7 @@ ul, ol {
 
 nav {
   background-color: rgba(0, 0, 0, 0.5);
-  position: fixed; /* Sticky navbar */
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -16,11 +16,11 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 20px; /* Adjust this value as needed */
+  padding-right: 20px;
 }
 
 nav li {
-  margin-left: 20px; /* Adjust this value as needed */
+  margin-left: 20px;
 }
 
 nav a {
@@ -33,3 +33,112 @@ nav a {
 nav a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card p {
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  nav ul {
+    padding-right: 10px;
+  }
+
+  nav a {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 0;
+  }
+
+  nav li {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Centering the headings */
+.heading {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Rest of your CSS styles */
+p {
+  font-weight: bold;
+}
+
+.heading h2 {
+  color: rgb(0, 0, 0);
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cards .card {
+  animation: moveUp 1s ease forwards;
+}
+
+/* Other CSS styles remain the same */
+

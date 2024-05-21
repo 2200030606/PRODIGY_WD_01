@@ -89,10 +89,24 @@ h1 {
 
 /* Style for the text */
 .text {
+  margin-top: 140px;
+  font-size: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   max-width: 40%; /* Adjust width as needed */
 }
 
 
+.animated-image {
+  width: 100%;
+  height: auto;
+  animation: imageFade 10s;
+}
 
-
+@keyframes imageFade {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  50% { opacity: 0; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
 
